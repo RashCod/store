@@ -1,0 +1,520 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  margin: 0;
+  padding: 0;
+}
+
+.popup {
+  width: 100%;
+}
+.popup__body {
+  border: 1px solid red;
+  max-width: 1200px;
+  height: 100vh;
+  margin: auto;
+  padding: 0px 15px;
+}
+.popup__modal {
+  position:relative;
+  margin: auto;
+  max-width: 600px;
+ max-height: 600px;
+  border-radius: 20px ;
+  box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px, rgb(10 37 64 / 35%) 0px -2px 6px 0px inset;
+    background-color: #fff;
+    padding: 50px ;
+    transition: all 0.8s ease 0s;
+  
+  
+}
+.popup__title-block {
+  margin: 10px;
+}
+.title__popup {
+  text-align: center;
+  font-size: 30px;
+  line-height: 150%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+.close__popup {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.close__popup:hover {
+  opacity: 1;
+}
+
+.popup__img-block {
+  position: relative;
+  margin: auto;
+  max-width: 400px;
+  height: 400px;
+  overflow: hidden;
+}
+.popup__img1 {
+  position: absolute;
+  /* margin: auto; */
+  max-width: 400px;
+  opacity: 0;
+}
+.popup__img1.active {
+ opacity: 1;
+  z-index: 10;
+  transition: all 1.8s ease 0s;
+}
+.popup__img2 {
+  max-width: 400px;
+  position: absolute;
+  opacity: 0;
+}
+.popup__img2.active {
+  opacity: 1;
+  transition: all 1.8s ease 0s;
+}
+.popup__miniimg-block {
+  width: 100%;
+  margin: 10px auto 20px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+.popup__mini-img {
+}
+.popup__button-block {
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 12%;
+ 
+}
+.phone__btn {
+  background-color: #2979ff;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+  border-radius: 20px;
+  padding: 14px 10px;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  
+}
+
+
+
+.phone__btn svg {
+  width: 24px;
+  height: 24px;
+  fill: rgb(254, 254, 254);
+}
+
+
+
+.popup_phone {
+  border-radius: 20px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
+}
+
+
+
+.phone__wht {
+  background-color: rgb(57, 161, 41);
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+  border-radius: 20px;
+  margin: 0 5%;
+  /* height: 33px; */
+  padding: 6px 10px;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.phone__wht svg {
+  fill: rgb(254, 254, 254);
+}
+.popup__wts {
+  border-radius: 20px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 33px;
+  font-size: 20px;
+  white-space: nowrap; 
+
+  color: #fff;
+}
+.phone__tg {
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+  background-color: rgb(64, 179, 224);
+  border-radius: 20px;
+  height: 33px;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 6px 10px;
+
+}
+
+.popup__tg {
+  border-radius: 20px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 33px;
+  color: #fff;
+  font-size: 20px;
+  fill: rgb(255, 255, 255);
+}
+
+.otstup {
+  width: 5px;
+}
+
+
+
+
+@media(max-width: 1200px){
+    .popup__modal{
+      padding: calc(20px + (50 - 20) * ((100vw - 320px) / (1200 - 320)));
+    }
+    .title__popup {
+      font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1200 - 320)));
+      margin-bottom: calc(10px + (20 - 10) * ((100vw - 320px) / (1200 - 320)));
+    }
+    .popup_phone span{
+      font-size: calc(10px + (20 - 5) * ((100vw - 320px) / (1200 - 320)));
+    }
+    .popup__wts span{
+      font-size: calc(10px + (20 - 3) * ((100vw - 320px) / (1200 - 320)));
+    }
+    .phone__tg span{
+      font-size: calc(10px + (20 - 3) * ((100vw - 320px) / (1200 - 320)));
+    }
+    .popup_phone svg{
+      width:  calc(10px + (20 - 3) * ((100vw - 320px) / (1200 - 320)));
+      height: calc(10px + (20 - 3) * ((100vw - 320px) / (1200 - 320)));
+    }
+    .popup__wts svg{
+      width:  calc(10px + (20 - 3) * ((100vw - 320px) / (1200 - 320)));
+      height: calc(10px + (20 - 3) * ((100vw - 320px) / (1200 - 320)));
+    }
+    .popup__tg svg{
+      width:  calc(10px + (20 - 3) * ((100vw - 320px) / (1200 - 320)));
+      height: calc(10px + (20 - 3) * ((100vw - 320px) / (1200 - 320)));
+    }
+    .popup__img1 {
+      
+    }
+}
+
+@media(max-width:425px) {
+  .popup__img-block{
+    left: 0px;
+    overflow: hidden;
+  }
+  .popup__img-block img{
+      width: 350px;
+  }
+  .popup__modal{
+    overflow: hidden;
+  }
+}
+
+@media(max-width:375px) {
+  .popup__img-block{
+    /* left: -25px; */
+    overflow: hidden;
+  }
+  .popup__img-block img{
+    width: 300px;
+    height: 400px;
+}
+
+}
+
+
+
+/* 
+@media(max-width:480px) {
+ 
+  .popup__body {
+    overflow: hidden;
+    width: 470px;
+    padding: 5px;
+    min-height: 100vh;
+  }
+  .popup__modal {
+    position: fixed;
+    border: 1px solid red;
+    margin: 0;
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 90vh;
+    width: 90%;
+  }
+  .popup__img-block {
+    position: relative;
+    max-width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+.popup__title-block {
+  margin: 50px 0px;
+  margin-right: 90px;
+}
+.title__popup{
+  font-size: 33px;
+}
+.close__popup {
+  position: absolute;
+  top: 3%;
+  right: 13%;
+  cursor: pointer;
+  opacity: 0.5;
+}
+.popup__miniimg-block {
+  width: 100%;
+  margin: 25px 0px;
+  cursor: pointer;
+  position: relative;
+  left: -30px;
+}
+.popup__button-block{
+  width: 85%;
+}
+.phone__btn {
+  width: 30%;
+}
+.phone__wht{
+  width: 30%;
+  margin: 0 3%;
+}
+.phone__tg{
+  width: 30%;
+}
+.popup_phone svg{
+  width: 15px;
+}
+.popup__wts svg{
+  width: 17px;
+}
+.phone__tg svg{
+  width: 15px;
+}
+.popup_phone {
+  font-size: 19px;
+}
+
+}
+
+@media(max-width:425px) {
+  .popup__body {
+    overflow: hidden;
+    width: 100%;
+    padding: 5px;
+  }
+  .popup__modal {
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+  }
+  .popup__img-block {
+    position: relative;
+    max-width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+.popup__img-block {
+  position: relative;
+  left: -18px;
+  height: 400px;
+  overflow: hidden;
+}
+.close__popup {
+  position: absolute;
+  top: 3%;
+  right: 15%;
+  cursor: pointer;
+  opacity: 0.5;
+}
+  .popup__modal {
+    
+  }
+  div.phone__btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+  
+  }
+  .popup__wts{
+    font-size: 18px;
+    
+  }
+  .popup__tg {
+    font-size: 17px;
+    
+  }
+  div.phone__btn span{
+    display: none;
+   
+  }
+  
+  .ph{
+    display: none ;
+   
+  }
+ 
+  .popup__body{
+    box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px, rgb(10 37 64 / 35%) 0px -2px 6px 0px inset;
+
+  }
+  
+ 
+}
+
+@media(max-width:390px) {
+  .popup__img-block {
+    left: -40px;
+  }
+  .close__popup{
+    right: 19%;
+  }
+}
+
+@media(max-width:376px) {
+  .popup__modal {
+    left: -10px;
+}
+.popup__miniimg-block {
+    width: 100%;
+    position: relative;
+    left: -15px;
+}
+.popup__title-block{
+  margin: 40px 0px;
+  margin-right: 60px;
+}
+  div.phone__btn{
+    
+  
+  }
+  .popup__tg {
+  
+  }
+  .popup__wts{
+   
+  }
+  .phone__tg svg{
+    width: 25px;
+    
+   }
+   .phone__wht svg{
+    width: 24px;
+   
+   
+   }
+   .popup__img-block img{
+   
+   }
+   .phone__tg span{
+    display: none;
+   }
+
+   .phone__tg{
+    width: 40px;
+    height: 48px;
+    border-radius: 50px;
+   }
+   .popup_phone svg{
+    width: 23px;
+   }
+   .phone__wht {
+    width: 40px;
+    height: 50px;
+    border-radius: 40px;
+   }
+   .otstup.wts{
+    display: none;
+   }
+   .phone__wht span {
+  display: none;
+}
+.close__popup {
+
+}
+}
+
+
+@media(max-width:320px){
+  .popup__wts{
+   
+  }
+  .popup__tg span{
+  
+  }
+ 
+  div.phone__btn{
+  
+  }
+  
+.popup__img-block {
+ 
+}
+.title__popup{
+ 
+}
+.popup__title-block{
+
+}
+div.phone__btn {
+ 
+}
+.phone__wht {
+ 
+  
+
+}
+.popup__wts span{
+  
+}
+div.phone__wht span{
+
+}
+.popup__tg{
+
+}
+.phone__tg {
+
+  
+ 
+}
+.popup__button-block {
+
+}
+.close__popup {
+ 
+}
+} */
